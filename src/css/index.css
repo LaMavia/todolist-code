@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+  width: 12px;
+  background-color: #3c3c3c;
+}
+body::-webkit-scrollbar-track{
+  width: 8px;
+  background-color: #eee;
+}
+.react-root{
+  width: 100%;
+  height: auto;
+    min-height: 100vh;
+}
