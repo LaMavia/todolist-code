@@ -25,14 +25,12 @@ class App extends Component {
   }
 
   addTodo(todo){
-    console.log(this.state.todosList);
     if(!todo) return false
-    let updatedTodos = this.state.todosList;
-    updatedTodos.push(todo);
+    console.log(this.state.todosList)
     this.setState({ 
-      todosList: updatedTodos
+      todosList: this.state.todosList.concat(todo)
     }, function(){
-      console.log(updatedTodos)
+      console.log(this.state.todosList)
     })
   }
 
