@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid'
 /*import JSDom from 'jsdom'
 import {Cookies} from '@tsmean/cookies'
 */
@@ -16,8 +17,9 @@ class App extends Component {
 
   componentWillMount() {
     let todosList = [
-      'Eat Breakfast',
-      'Workout'
+      {text: 'Eat Breakfast', id: uuid.v4()},
+      {text: 'Workout', id: uuid.v4()},
+      {text: 'Update Todos', id: uuid.v4()}
       ]
       this.setState({
         todosList
@@ -35,10 +37,9 @@ class App extends Component {
   }
 
   removeTodo(todo){
-    let updatedTodos = this.state.todosList;
-    updatedTodos = updatedTodos.filter((it) => it !== todo)
+    console.log(todo)
     this.setState({
-      todosList: updatedTodos
+      todosList: this.state.todosList.filter((it,i) => it.id !== todo.id)
     })
   }
 
