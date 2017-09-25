@@ -4,7 +4,7 @@ import uuid from 'uuid'
 export default class Form extends Component{
   subHandler(e){
     e.preventDefault()
-    let validator = /<|{|\(.*\);/g
+    let validator = /<|{|\(.*\);|^\s*/g
     let newTodo = {
       text: this.refs.content.value,
       id: uuid.v4()
