@@ -10,8 +10,8 @@ export default class List extends Component{
 
   render(){
     let listItems
-      listItems = this.props.itemsList.map((el,i) => {return(
-      <ListItem key={i} onDel={this.removeHandler.bind(this)} item={el}/>
+      listItems = this.props.itemsList.map(el => {return(
+      <ListItem onDel={this.removeHandler.bind(this)} item={el}/>
     )})
       if(this.props.itemsList.length > 0)return(
         <ol className="list">

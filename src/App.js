@@ -45,10 +45,6 @@ class App extends Component {
     }
   }
 
-  componentWillUnmount() {
-    Cookie.set("todos", this.state.todosList)
-  }
-
   addTodo(todo){
     if(!todo) return false
     console.log(this.state.todosList)

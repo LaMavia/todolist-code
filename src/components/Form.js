@@ -9,14 +9,14 @@ export default class Form extends Component{
       text: this.refs.content.value,
       id: uuid.v4()
     }
-      if(!validator.test(newTodo.text)){
-        newTodo.text = newTodo.text.trim()
-        if(newTodo.text.length){
-          this.props.subHandler(newTodo)
-          this.refs.content.value = '';
-          return
-        }
+    if(!validator.test(newTodo.text)){
+      newTodo.text = newTodo.text.trim()
+      if(newTodo.text.length){
+        this.props.subHandler(newTodo)
+        this.refs.content.value = '';
+        return
       }
+    }
     alert('Invalid String!');
   }
 
