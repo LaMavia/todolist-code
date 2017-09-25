@@ -5,6 +5,7 @@
   "dependencies": {
     "@tsmean/cookies": "^1.0.0",
     "cookies-js": "^1.2.3",
+    "js.cookie": "^0.0.4",
     "jsdom": "^11.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
