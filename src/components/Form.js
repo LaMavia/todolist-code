@@ -4,18 +4,19 @@ import uuid from 'uuid'
 export default class Form extends Component{
   subHandler(e){
     e.preventDefault()
-    let validator = /<|{|\(.*\);|^\s*/g
+    let validator = /<|{|\(.*\);/g;
     let newTodo = {
       text: this.refs.content.value,
       id: uuid.v4()
     }
-    if(newTodo){
       if(!validator.test(newTodo.text)){
-        this.props.subHandler(newTodo)
-        this.refs.content.value = '';
-        return
+        newTodo.text = newTodo.text.trim()
+        if(newTodo.text.length){
+          this.props.subHandler(newTodo)
+          this.refs.content.value = '';
+          return
+        }
       }
-    }
     alert('Invalid String!');
   }
 
