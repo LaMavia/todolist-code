@@ -33,7 +33,7 @@ class App extends Component {
   removeTodo(todo){
     this.setState({
       todosList: this.state.todosList.filter(it => it.id !== todo.id)
-    }, function(data){
+    }, function(){
       Cookie.set("todos", this.state.todosList)
     })
   }

@@ -17,7 +17,7 @@ export default class Form extends Component{
         return
       }
     }
-    alert('Invalid String!');
+    alert(`There's something wrong with your todo`);
   }
 
   render(){

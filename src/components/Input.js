@@ -12,11 +12,10 @@ export default class Input extends Component{
 
   render(){
     return(
-      <div className="input">
+      <header className="input">
         <img className="input__logo" src={Logo} alt="react logo"/>
         <Form subHandler={this.subHandler.bind(this)}/>
-        <div></div>
-      </div>
+      </header>
     )
   }
 }
