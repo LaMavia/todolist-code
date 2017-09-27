@@ -22,23 +22,23 @@ class App extends Component {
     }
   }
 
+  updateCookies(){
+    Cookie.set("todos", this.state.todosList)
+  }
+
   addTodo(todo){
     this.setState({ 
       todosList: this.state.todosList.concat(todo)
-    }, function(){
-      Cookie.set("todos", this.state.todosList)
-    })
+    }, this.updateCookies)
   }
 
   removeTodo(todo){
     this.setState({
       todosList: this.state.todosList.filter(it => it.id !== todo.id)
-    }, function(){
-      Cookie.set("todos", this.state.todosList)
-    })
+    }, this.updateCookies)
   }
 
-  render() {
+  render() { 
     return (
       <section className="app">
         <Input onAddTodo={this.addTodo.bind(this)}/>

@@ -24,7 +24,7 @@ export default class Form extends Component{
     return(
       <form className="input__add" onSubmit={this.subHandler.bind(this)}>
         <input className="input__add-content" ref="content" type="text" name="text"/>
-        <input className="input__add-btn" type="submit" value="add"/>
+        <input className="input__add-btn" type="submit" value="+"/>
       </form>
     )
   }
